@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+<TITLE>CALCULATOR</TITLE>
+<STYLE>
+input[type="button"]{
+  width: 100%;
+  margin-bottom: 20px;
+  height: 5px;
+  font-weight: bold;
+  border-radius: 100%;
+  padding-left: 20px;
+  padding-right: 30px;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  font-size: 20px;
+  text-align: center;
+  background: #6e7480;
+  color: #ffffff;
+
+}
+input[type="text"]{
+  margin-top: 10PX;
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+  font-size: 50px;
+  margin-bottom: 10px;
+  text-align: right;
+  background: #ccddff;
+}
+
+</STYLE>
+<SCRIPT>
+function clr(){
+document.getElementById('display').value="";
+}
+function data(val){
+document.getElementById('display').value+=val;
+}
+function calculate(){
+var x=document.getElementById('display').value;
+document.getElementById('display').value=eval(x);
+}
+</SCRIPT>
+</HEAD>
+<BODY>
+<H1><CENTER>CALCULATOR</CENTER></H1>
+<BR>
+<DIV STYLE="margin-left: 39%; width: 20%; height: 200px">
+<INPUT TYPE="TEXT" MAXLENGTH="100" ID="display" disabled >
+</DIV>
+<BR><BR>
+<DIV STYLE="width: 100%; height: 5px;">
+<DIV STYLE="margin-left: 40%; width: 10%; height: 100%; float: left;">
+<DIV STYLE="width: 5%; height: 100%; float: left;"><INPUT TYPE="BUTTON" VALUE="C" ONCLICK="clr()"/></DIV>
+</DIV>
+<DIV STYLE="margin-left: 50%; width: 10%; height: 100%;">
+<DIV STYLE="width: 5%; height: 100%; float: left;"><INPUT TYPE="BUTTON" VALUE="%" ONCLICK="data('%')"/></DIV>
+<DIV STYLE="margin-left: 50%; width: 5%; height: 100%;"><INPUT TYPE="BUTTON" VALUE="/" ONCLICK="data('/')"/></DIV>
+</DIV>
+</DIV>
+<BR><BR><BR>
+<DIV STYLE="width: 100%; height: 5px;">
+<DIV STYLE="margin-left: 40%; width: 10%; height: 100%; float: left;">
+<DIV STYLE="width: 5%; height: 100%; float: left;"><INPUT TYPE="BUTTON" VALUE="7" ONCLICK="data('7')"/></DIV>
+<DIV STYLE="margin-left: 50%; width: 5%; height: 100%;"><INPUT TYPE="BUTTON" VALUE="8" ONCLICK="data('8')"/></DIV>
+</DIV>
+<DIV STYLE="margin-left: 50%; width: 10%; height: 100%;">
+<DIV STYLE="width: 5%; height: 100%; float: left;"><INPUT TYPE="BUTTON" VALUE="9" ONCLICK="data('9')"/></DIV>
+<DIV STYLE="margin-left: 50%; width: 5%; height: 100%;"><INPUT TYPE="BUTTON" VALUE="+" ONCLICK="data('+')"/></DIV>
+</DIV>
+</DIV>
+<BR><BR><BR>
+<DIV STYLE="width: 100%; height: 5px;">
+<DIV STYLE="margin-left: 40%; width: 10%; height: 100%; float: left;">
+<DIV STYLE="width: 5%; height: 100%; float: left;"><INPUT TYPE="BUTTON" VALUE="4" ONCLICK="data('4')"/></DIV>
+<DIV STYLE="margin-left: 50%; width: 5%; height: 100%;"><INPUT TYPE="BUTTON" VALUE="5" ONCLICK="data('5')"/></DIV>
+</DIV>
+<DIV STYLE="margin-left: 50%; width: 10%; height: 100%;">
+<DIV STYLE="width: 5%; height: 100%; float: left;"><INPUT TYPE="BUTTON" VALUE="6" ONCLICK="data('6')"/></DIV>
+<DIV STYLE="margin-left: 50%; width: 5%; height: 100%;"><INPUT TYPE="BUTTON" VALUE="-" ONCLICK="data('-')"/></DIV>
+</DIV>
+</DIV>
+<BR><BR><BR>
+<DIV STYLE="width: 100%; height: 5px;">
+<DIV STYLE="margin-left: 40%; width: 10%; height: 100%; float: left;">
+<DIV STYLE="width: 5%; height: 100%; float: left;"><INPUT TYPE="BUTTON" VALUE="1" ONCLICK="data('1')"/></DIV>
+<DIV STYLE="margin-left: 50%; width: 5%; height: 100%;"><INPUT TYPE="BUTTON" VALUE="2" ONCLICK="data('2')"/></DIV>
+</DIV>
+<DIV STYLE="margin-left: 50%; width: 10%; height: 100%;">
+<DIV STYLE="width: 5%; height: 100%; float: left;"><INPUT TYPE="BUTTON" VALUE="3" ONCLICK="data('3')"/></DIV>
+<DIV STYLE="margin-left: 50%; width: 5%; height: 100%;"><INPUT TYPE="BUTTON" VALUE="*" ONCLICK="data('*')"/></DIV>
+</DIV>
+</DIV>
+<BR><BR><BR>
+<DIV STYLE="width: 100%; height: 5px;">
+<DIV STYLE="margin-left: 40%; width: 10%; height: 100%; float: left;">
+<DIV STYLE="width: 5%; height: 100%; float: left;"><INPUT TYPE="BUTTON" VALUE="." ONCLICK="data('.')"/></DIV>
+<DIV STYLE="margin-left: 50%; width: 5%; height: 100%;"><INPUT TYPE="BUTTON" VALUE="0" ONCLICK="data('0')"/></DIV>
+</DIV>
+<DIV STYLE="margin-left: 50%; width: 10%; height: 100%;">
+<DIV STYLE="width: 100%; height: 100%; float: left;"><INPUT TYPE="BUTTON" VALUE="=" ONCLICK="calculate()"/></DIV>
+</DIV>
+</DIV>
+<BR><BR><BR>
+
+</BODY>
+</HTML>
